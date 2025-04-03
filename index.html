@@ -11,20 +11,10 @@
     <meta property="og:description" content="Get high-quality commerce study materials, PDFs, and video lessons at LeComerce.">
     <meta property="og:url" content="https://yourwebsite.com">
     <meta property="og:type" content="website">
-    <link rel="manifest" href="manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-            .then(registration => {
-                console.log('Service Worker registered with scope:', registration.scope);
-            }).catch(error => {
-                console.log('Service Worker registration failed:', error);
-            });
-        }
-    </script>
     <title>LeComerce - Free & Paid Commerce Notes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    <link rel="manifest" href="manifest.json">
     <style>
         body {
             background: linear-gradient(to bottom, #1E3A8A, #FFFFFF);
@@ -89,19 +79,23 @@
     <section id="services">
         <h2>Our Services</h2>
         <ul>
-            <li>📖 <strong>Free Content:</strong>
+            <li>Download PDFs:
                 <ul>
-                    <li><a href="Class_11_Accounting_Chapter_1_Notes.pdf" target="_blank">Class 11 Accounting Chapter 1 Notes</a></li>
-                    <li><a href="Presentation 6.pdf" target="_blank">Class 11 Accounts Ch- 1 All Important Notes</a></li>
+                    <li>📖 <strong>Free Content:</strong>
+                        <ul>
+                            <li><a href="Class_11_Accounting_Chapter_1_Notes.pdf" target="_blank">Class 11 Accounting Chapter 1 Notes</a></li>
+                            <li><a href="Presentation 6.pdf" target="_blank">Class 11 Accounts Ch-1 All Important Notes</a></li>
+                        </ul>
+                    </li>
+                    <li>💰 <strong>Paid Content:</strong>
+                        <ul>
+                            <li><a href="#" target="_blank">Premium Commerce Study Guide</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
-            <li>💰 <strong>Paid Content:</strong>
-                <ul>
-                    <li><a href="#" target="_blank">Premium Commerce Study Guide</a></li>
-                </ul>
-            </li>
-            <li>📺 <strong>Service 2:</strong> <a href="https://youtube.com/@all_comerce_contents?si=IQ1-wtbujEwH3ZF5" target="_blank">Watch Explanation Video</a></li>
-            <li>📢 <strong>Service 3:</strong> <a href="https://t.me/+j4UFQAciF5RhY2Q1" target="_blank">Join Our Telegram Channel</a></li>
+            <li>Service 2 - <a href="https://youtube.com/@all_comerce_contents?si=IQ1-wtbujEwH3ZF5" target="_blank">Watch Explanation Video</a></li>
+            <li>Service 3 - <a href="https://t.me/+j4UFQAciF5RhY2Q1" target="_blank">Join Our Telegram Channel</a></li>
         </ul>
     </section>
     
@@ -123,21 +117,18 @@
     
     <footer>
         <p>&copy; 2025 LeComerce. All Rights Reserved.</p>
+        <section id="telegram">
+        <h2>Join Our Telegram Channel</h2>
+        <p>Stay updated with the latest commerce notes and resources.</p>
+        <a href="https://t.me/+j4UFQAciF5RhY2Q1" target="_blank" style="font-size: 18px; color: #1E3A8A; text-decoration: none; font-weight: bold;">Join Now</a>
+    </section>
     </footer>
     
     <script>
-        document.querySelector("form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
-            if (name === "" || email === "" || message === "") {
-                alert("Please fill in all fields.");
-            } else {
-                alert("Thank you for contacting us! We will get back to you soon.");
-                this.reset();
-            }
-        });
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js")
+            .then(() => console.log("Service Worker Registered"));
+        }
     </script>
 </body>
 </html>
